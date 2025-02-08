@@ -29,6 +29,8 @@ jobs:
           images: |
             rubidiumdev/texlive-full
             ghcr.io/jannikemmerich/debian-texlive
+          flavor: |
+            latest=true
 
       - name: Log in to Docker Hub Container Registry
         uses: docker/login-action@v3
