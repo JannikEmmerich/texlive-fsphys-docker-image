@@ -5,11 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Update package lists and install texlive-full
 RUN apt-get update \
-    && apt-get install `apt-get --assume-no install texlive-full | \
-		awk '/The following additional packages will be installed/{f=1;next} /Suggested packages/{f=0} f' | \
-		tr ' ' '\n' | \
-        grep -vP 'doc$' | \
-        tr '\n' ' '` \
+    && apt-get -y install texlive-base texlive-fonts-recommended texlive-fonts-extra texlive-font-utils texlive-lang-german texlive-lang-english texlive-latex-base texlive-latex-recommended texlive-pstricks texlive-science texlive-latex-extra
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
