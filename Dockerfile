@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Update package lists and install texlive-full
 RUN apt-get update \
-    && sudo apt install `sudo apt --assume-no install texlive-full | \
+    && apt-get install `apt-get --assume-no install texlive-full | \
 		awk '/The following additional packages will be installed/{f=1;next} /Suggested packages/{f=0} f' | \
 		tr ' ' '\n' | \
         grep -vP 'doc$' | \
