@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            rubidiumdev/texlive-full
+            rubidiumdev/texlive-fsphys
             ghcr.io/jannikemmerich/debian-texlive
           flavor: |
             latest=true
