@@ -27,8 +27,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            rubidiumdev/texlive-full:lates
-            ghcr.io/jannikemmerich/debian-texlive:latest
+            rubidiumdev/texlive-full
+            ghcr.io/jannikemmerich/debian-texlive
 
       - name: Log in to Docker Hub Container Registry
         uses: docker/login-action@v3
